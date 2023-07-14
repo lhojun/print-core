@@ -5,5 +5,5 @@ authors = ["lhojun"]
 edition = "2021"
 license = "MIT"
 description = "Rust Print Core for Windows/macOS"
-
+repository = "https://github.com/lhojun/print-core"
 [dependencies]
