@@ -13,7 +13,9 @@ pub fn get_printer_list() -> Result<Vec<String>, String> {
     let printers: Vec<&str> = output_string.split_inclusive("\n").collect();
     let mut result = Vec::with_capacity(printers.len());
     for printer in printers {
-        result.push(printer.to_string());
+        let result_name = printer.replace("\n", "");
+        let printer_name = result_name.replace("_", " ").trim().to_string();
+        result.push(printer_name);
     }
     Ok(result)
 }
